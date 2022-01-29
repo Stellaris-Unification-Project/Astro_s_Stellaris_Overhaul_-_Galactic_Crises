@@ -1,0 +1,42 @@
+######################################
+# 
+# Marauder Triggering Events
+#
+######################################
+
+namespace = aso_marauder_trigger
+
+event = {
+	id = aso_marauder_trigger.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		mid_game_years_passed >= 1
+		NOT = { has_global_flag = marauder_crisis_ongoing }
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = dormant_marauders
+				OR = {
+					AND = {
+						has_country_flag = marauder_1
+						any_system_within_border = { has_star_flag = marauder_capital_1 }
+					}
+					AND = {
+						has_country_flag = marauder_2
+						any_system_within_border = { has_star_flag = marauder_capital_2 }
+					}
+					AND = {
+						has_country_flag = marauder_3
+						any_system_within_border = { has_star_flag = marauder_capital_3 }
+					}
+				}
+			}
+			country_event = { id = marauder.500 days = 1 }
+		}
+	}
+}

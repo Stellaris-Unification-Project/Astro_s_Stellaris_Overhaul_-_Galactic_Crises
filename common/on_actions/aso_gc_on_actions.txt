@@ -1,0 +1,11 @@
+on_late_game_pulse = {
+	events = {
+		aso_gc_crisis_trigger.1 # Force all 3 crises to spawn randomly within 20 years
+	}
+}
+
+on_mid_game_pulse = {
+	events = {
+		leviathans.2011 # Spawn wraith
+	}
+}

@@ -1,0 +1,7 @@
+	NAI = {
+#		HORDE_INVASION_PLANNING_DEPTH = 5	# How far out does the Horde AI looks for invasion targets (in system hops)
+		HORDE_INVASION_PLANNING_DEPTH = 99	# How far out does the Horde AI looks for invasion targets (in system hops)
+
+#		SWARM_INVASION_PLANNING_DEPTH = 5	# How far out does the Swarm AI looks for invasion targets (in system hops)
+		SWARM_INVASION_PLANNING_DEPTH = 99	# How far out does the Swarm AI looks for invasion targets (in system hops)
+	}

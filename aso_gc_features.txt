@@ -1,0 +1,21 @@
+[h1]Astro's Stellaris Overhaul - Galactic Crises[/h1]
+This mod is meant to make the galaxy is dark and full of terrors!
+Note: Should be compatible with virtually any mod.
+[h2]Feature Summary[/h2]
+[h3]Vanilla Overwrites[/h3]
+- common/defines/00_defines.txt
+[list]
+[*] Crises may look for invasion targets further out than vanilla (so they are less predictable).
+[/list]
+- events/various
+[list]
+[*] Stellar Wraith should always spawn mid-game.
+[*] Dormant Marauders will continue to awaken (though one at a time) until they are destroyed or become regular empires.
+[*] The Bemat Thassalocracy will always spawn.
+[*] End-game crises have fewer restrictions on where they can spawn.
+[*] Fallen empires will always awaken, and there will always be a War in Heaven.
+[/list]
+[h3]New Features[/h3]
+[list]
+[*] All 3 crises should appear during late game; and may occur simultaneously.
+[/list]

@@ -1,0 +1,51 @@
+namespace = crisis
+
+# Prethoryn Invasion Begins (HIDDEN)
+country_event = {
+	id = crisis.10
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = aso_crisis_prethoryn_happened
+		endgame_telemetry = prethoryn
+		set_global_flag = prethoryn_subspace_echoes
+		set_global_flag = prethoryn_invasion_happened
+		set_global_flag = galactic_crisis_happened
+		observer_event = { id = observer.27 }
+		every_country = {
+			limit = { is_country_type = default }
+			country_event = { id = crisis.11 }
+		}
+	}
+}
+
+# Approaching the Outer Rim (HIDDEN)
+country_event = {
+	id = crisis.12
+	hide_window = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		months = 600
+	}
+
+	trigger = {
+		is_country_type = default
+		has_global_flag = prethoryn_subspace_echoes
+	}
+
+	immediate = {
+		remove_global_flag = prethoryn_subspace_echoes
+		set_global_flag = prethoryn_approaching_rim
+		random_rim_system = {
+			set_star_flag = swarm_invasion_target_1
+		}
+		observer_event = { id = observer.28 }
+		every_country = {
+			limit = { is_country_type = default }
+			country_event = { id = crisis.13 }
+		}
+	}
+}

@@ -1,0 +1,73 @@
+######################################
+#
+# Crisis Triggering Events
+#
+######################################
+
+namespace = aso_gc_crisis_trigger
+
+event = {
+	id = aso_gc_crisis_trigger.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = { is_crises_allowed = yes }
+
+	immediate = {
+		random_country = {
+			limit = { is_country_type = global_event } # global_event country is always around
+
+			random_list = {
+
+				### Scourge/Unbidden/Contingency
+				10 = {
+					country_event = { id = crisis.10 days = 1 random = 360 } #Scourge
+					country_event = { id = crisis.1000 days = 1 random = 3600 } #Unbidden
+					country_event = { id = crisis.2005 days = 1 random = 7200 } #Contingency
+					set_global_flag = galactic_crisis_happened
+				}
+
+				### Scourge/Contingency/Unbidden
+				10 = {
+					country_event = { id = crisis.10 days = 1 random = 360 } #Scourge
+					country_event = { id = crisis.2005 days = 1 random = 3600 } #Contingency
+					country_event = { id = crisis.1000 days = 1 random = 7200 } #Unbidden
+					set_global_flag = galactic_crisis_happened
+				}
+
+				### Contingency/Scourge/Unbidden
+				10 = {
+					country_event = { id = crisis.2005 days = 1 random = 360 } #Contingency
+					country_event = { id = crisis.10 days = 1 random = 3600 } #Scourge
+					country_event = { id = crisis.1000 days = 1 random = 7200 } #Unbidden
+					set_global_flag = galactic_crisis_happened
+				}
+
+				### Contingency/Unbidden/Scourge
+				10 = {
+					country_event = { id = crisis.2005 days = 1 random = 360 } #Contingency
+					country_event = { id = crisis.1000 days = 1 random = 3600 } #Unbidden
+					country_event = { id = crisis.10 days = 1 random = 7200 } #Scourge
+					set_global_flag = galactic_crisis_happened
+				}
+
+				### Unbidden/Contingency/Scourge
+				10 = {
+					country_event = { id = crisis.1000 days = 1 random = 360 } #Unbidden
+					country_event = { id = crisis.2005 days = 1 random = 3600 } #Contingency
+					country_event = { id = crisis.10 days = 1 random = 7200 } #Scourge
+					set_global_flag = galactic_crisis_happened
+				}
+
+				### Unbidden/Scourge/Contingency
+				10 = {
+					country_event = { id = crisis.1000 days = 1 random = 360 } #Unbidden
+					country_event = { id = crisis.10 days = 1 random = 3600 } #Scourge
+					country_event = { id = crisis.2005 days = 1 random = 7200 } #Contingency
+					set_global_flag = galactic_crisis_happened
+				}
+			}
+		}
+	}
+}

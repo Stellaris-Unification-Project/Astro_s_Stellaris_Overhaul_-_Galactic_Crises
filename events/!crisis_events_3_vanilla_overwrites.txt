@@ -1,0 +1,107 @@
+############################
+#
+# Crisis Events III
+#
+# Written by Henrik Thyrwall and Miranda van den Brink
+#
+############################
+
+namespace = crisis
+
+# Crisis Initiated
+country_event = {
+	id = crisis.2005
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = aso_crisis_contingency_happened
+		set_global_flag = ai_invasion_happened
+		set_global_flag = ai_ghost_signal
+		endgame_telemetry = ai_revolt
+
+		observer_event = { id = observer.41 }
+		# The Ghost Signal
+		every_country = {
+			limit = { is_country_type = default }
+			country_event = { id = crisis.2010 }
+		}
+		# Synths Act Strange
+		every_country = {
+			limit = { is_country_type = default }
+			country_event = { id = crisis.2006 days = 50 random = 100 }
+		}
+		# Machine Empire Pops Act Strange
+		every_country = {
+			limit = { has_authority = auth_machine_intelligence }
+			country_event = { id = crisis.2500 days = 50 random = 100 }
+		}
+		# Synths Disappear
+		every_country = {
+			limit = { is_country_type = default }
+			country_event = { id = crisis.2007 days = 200 random = 100 }
+		}
+		# Synthetic Disappearances
+		every_country = {
+			limit = { is_country_type = default }
+			country_event = { id = crisis.2020 days = 350 random = 100 }
+		}
+		# The Summons
+		every_country = {
+			limit = { is_country_type = default }
+			country_event = { id = crisis.2021 days = 500 random = 100 }
+		}
+		# The Arrival
+		every_country = {
+			limit = { is_country_type = default }
+			country_event = { id = crisis.2022 days = 700 }
+		}
+		# First Machine World
+		random_galaxy_planet = {
+			limit = { has_planet_flag = machine_world_1 }
+			planet_event = { id = crisis.2025 days = 725 random = 5 }
+		}
+		# Second Machine World
+		random_galaxy_planet = {
+			limit = { has_planet_flag = machine_world_2 }
+			planet_event = { id = crisis.2026 days = 750 random = 5 }
+		}
+		# Third Machine World
+		random_galaxy_planet = {
+			limit = { has_planet_flag = machine_world_3 }
+			planet_event = { id = crisis.2027 days = 775 random = 5 }
+		}
+		# Fourth Machine World
+		random_galaxy_planet = {
+			limit = { has_planet_flag = machine_world_4 }
+			planet_event = { id = crisis.2028 days = 800 random = 5 }
+		}
+		# Synth Infiltration
+		every_country = {
+			limit = { is_country_type = default }
+			if = {
+				limit = {
+					NOR = {
+						has_authority = auth_hive_mind
+						has_authority = auth_machine_intelligence
+						owner_species = { has_trait = trait_psionic }
+					}
+				}
+				country_event = { id = crisis.2085 days = 900 random = 50 }
+			}
+			if = {
+				limit = { has_authority = auth_hive_mind }
+				country_event = { id = crisis.2086 days = 900 random = 50 }
+			}
+			if = {
+				limit = { owner_species = { has_trait = trait_psionic } }
+				country_event = { id = crisis.2087 days = 900 random = 50 }
+			}
+			if = {
+				limit = { has_authority = auth_machine_intelligence }
+				country_event = { id = crisis.2313 days = 900 random = 50 }
+			}
+		}
+	}
+}

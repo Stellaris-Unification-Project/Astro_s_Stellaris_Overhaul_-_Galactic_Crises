@@ -1,0 +1,31 @@
+#################################
+### Leviathan & Enclave Events###
+### by Maximilian Olbers	  ###
+### & Niclas Karlsson		  ###
+### & Rufus Tronde			  ###
+### & Henrik Thyrwall			  ###
+#################################
+
+namespace = leviathans
+
+
+# wraith won't be discovered past the midgame
+event = {
+	id = leviathans.20101
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_system = {
+			any_system_planet = { has_planet_flag = guardians_wraith_pulsar }
+		}
+	}
+
+	immediate = {
+#		random_planet = {
+#			limit = { has_planet_flag = guardians_wraith_pulsar }
+#			remove_planet_flag = guardians_wraith_pulsar
+#		}
+	}
+}

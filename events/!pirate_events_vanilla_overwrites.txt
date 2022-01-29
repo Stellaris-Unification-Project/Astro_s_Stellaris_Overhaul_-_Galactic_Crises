@@ -1,0 +1,31 @@
+###############################################
+# Pirate Events
+# Written by Henrik Thyrwall (& Gemma Thomson)
+###############################################
+
+namespace = pirate
+
+############################
+# Late-game Pirates
+# Written by Gemma Thomson
+############################
+
+# Setup (triggered by on_late_game_pulse): Choose a pirate fleet to spawn
+event = {
+    id = pirate.100
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+		mid_game_years_passed >= 50
+        any_system = {
+            has_system_trade_value >= 200
+        }
+    }
+
+    immediate = {
+		event_target:global_event_country = {
+			country_event = { id = pirate.150 days = 550 }
+		}
+    }
+}
