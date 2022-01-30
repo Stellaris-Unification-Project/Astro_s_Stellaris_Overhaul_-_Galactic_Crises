@@ -14,7 +14,7 @@ country_event = {
 		set_global_flag = prethoryn_invasion_happened
 		set_global_flag = galactic_crisis_happened
 		observer_event = { id = observer.27 }
-		every_country = {
+		every_playable_country = {
 			limit = { is_country_type = default }
 			country_event = { id = crisis.11 }
 		}
@@ -43,7 +43,7 @@ country_event = {
 			set_star_flag = swarm_invasion_target_1
 		}
 		observer_event = { id = observer.28 }
-		every_country = {
+		every_playable_country = {
 			limit = { is_country_type = default }
 			country_event = { id = crisis.13 }
 		}

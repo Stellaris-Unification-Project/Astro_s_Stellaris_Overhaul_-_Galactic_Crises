@@ -23,7 +23,7 @@ event = {
 	}
 
 	immediate = {
-#		random_planet = {
+#		random_system_planet = {
 #			limit = { has_planet_flag = guardians_wraith_pulsar }
 #			remove_planet_flag = guardians_wraith_pulsar
 #		}

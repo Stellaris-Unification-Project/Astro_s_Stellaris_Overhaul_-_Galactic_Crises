@@ -23,12 +23,12 @@ country_event = {
 
 		observer_event = { id = observer.41 }
 		# The Ghost Signal
-		every_country = {
+		every_playable_country = {
 			limit = { is_country_type = default }
 			country_event = { id = crisis.2010 }
 		}
 		# Synths Act Strange
-		every_country = {
+		every_playable_country = {
 			limit = { is_country_type = default }
 			country_event = { id = crisis.2006 days = 50 random = 100 }
 		}
@@ -38,22 +38,22 @@ country_event = {
 			country_event = { id = crisis.2500 days = 50 random = 100 }
 		}
 		# Synths Disappear
-		every_country = {
+		every_playable_country = {
 			limit = { is_country_type = default }
 			country_event = { id = crisis.2007 days = 200 random = 100 }
 		}
 		# Synthetic Disappearances
-		every_country = {
+		every_playable_country = {
 			limit = { is_country_type = default }
 			country_event = { id = crisis.2020 days = 350 random = 100 }
 		}
 		# The Summons
-		every_country = {
+		every_playable_country = {
 			limit = { is_country_type = default }
 			country_event = { id = crisis.2021 days = 500 random = 100 }
 		}
 		# The Arrival
-		every_country = {
+		every_playable_country = {
 			limit = { is_country_type = default }
 			country_event = { id = crisis.2022 days = 700 }
 		}
@@ -78,7 +78,7 @@ country_event = {
 			planet_event = { id = crisis.2028 days = 800 random = 5 }
 		}
 		# Synth Infiltration
-		every_country = {
+		every_playable_country = {
 			limit = { is_country_type = default }
 			if = {
 				limit = {
